@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="@dimen/cardview_default_elevation">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/ivLike"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/gif_image"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_dislike" />
+
+        <ProgressBar
+            android:id="@+id/gif_progress"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="24dp" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/gif_image"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true" />
+
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
